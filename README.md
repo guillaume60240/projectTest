@@ -46,29 +46,30 @@ npm run electron:start-live
 ```bash
 npm run electron:make
 ```
-> *Note: If no publisher is defined delete in* ``electron-builder.config.json``
+> *Note: If no publisher is defined delete in* ```electron-builder.config.json```
 >```json
 >"publish": {
 >    "provider": "github"
 >},
 >```
-<r>
-case error: 
-</r>
-```bash 
-Exit code: ENOENT. spawn /usr/bin/python ENOENT  failedTask=build stackTrace=Error: Exit code: ENOENT. spawn /usr/bin/python ENOENT
-```
-Update your ```package.json```
-```json
-"devDependencies": {
-    "electron": "^18.0.0",
-    "electron-builder": "^23.0.3",
-    "npm": "^8.8.0",
-    "node-cmd": "^5.0.0",
-    "electron-rebuild": "^3.2.7",
-    "typescript": "~4.3.5"
-  },
-```
+
+> :boom: case error :
+>
+> ```bash 
+> Exit code: ENOENT. spawn /usr/bin/python ENOENT  failedTask=build > stackTrace=Error: Exit code: ENOENT. spawn /usr/bin/python ENOENT
+>```
+>
+> Update your ```package.json```
+>```json
+>"devDependencies": {
+>    "electron": "^18.0.0",
+>    "electron-builder": "^23.0.3",
+>    "npm": "^8.8.0",
+>    "node-cmd": "^5.0.0",
+>    "electron-rebuild": "^3.2.7",
+>    "typescript": "~4.3.5"
+>  },
+>```
 
 **7) Add the build Android**
 On the root directory run :
@@ -103,10 +104,3 @@ That build the project, create the APK in the ```./android```directory, open And
 > I work to resolve it. I take any ideas that come
 
 :white_check_mark: Now enjoy and work to your multi-platform app!! :rocket:
-
-<style>
-r { color: Red }
-o { color: Orange }
-g { color: Green }
-d style:{diplay= "flex"; flex-direction="column"}
-</style>
