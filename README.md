@@ -90,9 +90,9 @@ npx cap open android
 **9) We can now create new commands on the root directory**
 ```json
 "scripts": {
-    "android:open": "npx cap open android",
+     "android:open": "npx cap open android",
     "capacitor:build": "npx cap copy && npx cap sync",
-    "build:all": "npm run build && npm run capacitor:build && npm run android:open && npm --prefix ./electron run build && npm --prefix ./electron run build"
+    "build:all": "npm run build && npm run capacitor:build && npm run android:open && cp -r ./dist ./electron/app && npm --prefix ./electron run build && npm --prefix ./electron run electron:make"
   },
 ```
 That build the project, create the APK in the ```./android```directory, open Android Studio for build the app, build the Electron app and create a ```.dmg```package in ```./electron/dist``` 
